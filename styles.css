@@ -96,7 +96,7 @@ form button:hover {
 }
 
 .modal {
-  display: none;
+  /*display: none;*/
   position: fixed;
   left: 0;
   top: 0;
@@ -108,6 +108,7 @@ form button:hover {
 }
 
 .modal-content {
+  position: relative;
   width: 80%;
   max-width: 60rem;
   background-color: #eeeeee;
@@ -119,10 +120,24 @@ form button:hover {
 }
 
 @keyframes slide {
-  from {
+  0% {
     transform: translateY(-30rem);
   }
-  to {
+  100% {
     transform: translateY(0);
   }
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.close-modal {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: var(--color-primary);
+  font-size: 2rem;
+  cursor: pointer;
 }
