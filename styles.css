@@ -96,7 +96,7 @@ form button:hover {
 }
 
 .modal {
-  /*display: none;*/
+  display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -116,7 +116,7 @@ form button:hover {
   padding: 2rem;
   border: 1px solid #777;
   text-align: center;
-  animation: slide ease .8;
+  animation: slide ease 0.8s;
 }
 
 @keyframes slide {
@@ -128,11 +128,6 @@ form button:hover {
   }
 }
 
-.modal-header {
-  display: flex;
-  flex-direction: row;
-}
-
 .close-modal {
   position: absolute;
   top: 5px;
@@ -140,4 +135,17 @@ form button:hover {
   color: var(--color-primary);
   font-size: 2rem;
   cursor: pointer;
+}
+
+.slide-up {
+  animation: slide-up ease 0.8s;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50rem);
+  }
 }
